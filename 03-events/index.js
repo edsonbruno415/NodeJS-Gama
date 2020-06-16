@@ -19,6 +19,6 @@ const stdin = process.stdin;
 
 stdin.addListener('data',(value)=>{
   console.log(`Você digitou: ${value.toString().trim()}`);
-})
+});
 
 
