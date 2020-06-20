@@ -10,7 +10,7 @@ docker run \
     -d \
     postgres
 
-docker ps
+docker ps ou docker ps -a
 docker exec -it postgres /bin/bash
 
 docker run \
