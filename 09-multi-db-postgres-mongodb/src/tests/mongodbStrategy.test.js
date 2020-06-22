@@ -9,10 +9,16 @@ const MOCK_HEROI_CADASTRAR = {
     poder: 'Anel'
 }
 
+const MOCK_HEROI_DEFAULT = {
+    nome: `Homem-Aranha-${Date.now()}`,
+    poder: 'Super Teia'
+}
+
 describe('MongoDB Suite de testes', function(){
     this.timeout(Infinity);
     this.beforeAll(async()=>{
         await context.connect();
+        await context.create(MOCK_HEROI_DEFAULT);
     });
     
     it('Verificar conexao', async()=>{
@@ -25,6 +31,15 @@ describe('MongoDB Suite de testes', function(){
     it('Cadastrar Heroi', async()=>{
         const { nome, poder } = await context.create(MOCK_HEROI_CADASTRAR);
         assert.deepEqual({ nome, poder }, MOCK_HEROI_CADASTRAR);
+    });
+
+    it('Listar Heroi', async()=>{
+        const [{ nome, poder }] = await context.read({ nome: MOCK_HEROI_DEFAULT.nome });
+        const result = {
+            nome,
+            poder
+        }
+        assert.deepEqual(result, MOCK_HEROI_DEFAULT);
     });
 });
 
