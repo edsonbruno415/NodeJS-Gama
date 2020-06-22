@@ -59,7 +59,8 @@ describe('MongoDB Suite de testes', function(){
     });
 
     it('Remover Heroi', async()=>{
-        
+        const result = await context.delete(MOCK_HEROI_ID);
+        assert.deepEqual(result.n, 1);
     });
 });
 
