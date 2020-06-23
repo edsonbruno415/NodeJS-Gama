@@ -1,0 +1,22 @@
+{
+  "name": "07-multi-db",
+  "version": "1.0.0",
+  "description": "docker run \\     --name postgres \\     -e POSTGRES_USER=erickwendel \\     -e POSTGRES_PASSWORD=minhasenhasecreta \\     -e POSTGRES_DB=heroes \\     -p 5432:5432 \\     -d \\     postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/tests/*.js",
+    "test:watch": "mocha src/tests/*.js -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.19",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.13"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
