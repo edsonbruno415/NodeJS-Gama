@@ -15,7 +15,6 @@ describe('Suite de testes de API Herois', function(){
         });
         const dados = JSON.parse(result.payload);
         const statusCode = result.statusCode;
-        console.log(dados);
         assert.deepEqual(statusCode, 200);
         assert.ok(Array.isArray(dados));
     });

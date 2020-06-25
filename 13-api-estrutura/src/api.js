@@ -3,21 +3,24 @@ const Hapi = require('hapi');
 const HeroiSchema = require('./db/strategies/mongodb/schemas/heroisSchema');
 const MongoDb = require('./db/strategies/mongodb/mongodb');
 const Context = require('./db/strategies/base/contextStrategy');
+const HeroRoutes = require('./routes/heroRoutes');
 const app = new Hapi.Server({
     port: 5000
 });
+
+function mapRoutes(instance, methods){
+    return methods.map(method => instance[method]()); 
+}
 
 async function main(){
     const connection = MongoDb.connect();
     const context = new Context(new MongoDb(connection, HeroiSchema));
 
-    app.route([{
-        path: '/herois',
-        method: 'GET',
-        handler: (request, handler)=>{
-            return context.read();
-        }
-    }]);
+    console.log('mapRoutes => ', ...mapRoutes(new HeroRoutes(context), HeroRoutes.methods()));
+
+    app.route([
+        ...mapRoutes(new HeroRoutes(context), HeroRoutes.methods())
+    ]);
 
     await app.start();
     console.log('Application is running on port ',app.info.port);
