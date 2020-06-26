@@ -37,7 +37,8 @@ class HeroRoutes extends BaseRoute{
 
                     const query = nome ? {
                         nome: { 
-                            $regex: `.*${nome}*.` 
+                            $regex: `.*${nome}*.`,
+                            $options: 'i'
                         }
                     } : {};
 
