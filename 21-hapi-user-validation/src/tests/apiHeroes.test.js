@@ -18,6 +18,7 @@ const MOCK_HEROI_INICIAL = {
 let MOCK_ID = '';
 describe('Suite de testes de API Herois', function(){
     this.beforeAll(async()=>{
+        //this.timeout(Infinity);
         app = await api;
         const result = await app.inject({
             method: 'POST',

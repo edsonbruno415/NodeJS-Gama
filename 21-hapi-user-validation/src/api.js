@@ -22,7 +22,7 @@ const JWT_SECRET = 'MEU_SEGREDAO_123';
 
 const app = new Hapi.Server({
     host: 'localhost',
-    port: 5000
+    port: 3333
 });
 
 function mapRoutes(instance, methods){
