@@ -3,7 +3,7 @@
  //npm i hapi-auth-jwt2
  //npm i bcrypt
 
- //process.env  === as variaveis de ambiente do 
+ //process.env  === as variaveis de ambiente do Node
  
 const { config } = require('dotenv');
 const path = require('path');
