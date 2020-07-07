@@ -1,8 +1,9 @@
 # API-Hérois - NodeJS
-###Exercícios propostos durantes as aulas de NodeJS da Gama Academy para a criação de uma API com NodeJS
+### Exercícios propostos durantes as aulas de NodeJS da Gama Academy para a criação de uma API com NodeJS
+Instrutor: Erick Wendel
 Acesse o projeto em: https://api-herois-gama.herokuapp.com/documentation
 
-####Objetivo:
+#### Objetivo:
 * Construir uma api com as práticas de desenvolvimento orientado a testes. :heavy_check_mark:
 * Utilizar o framework HapiJS para desenvolver a api. :heavy_check_mark:
 * Fazer os testes com Mocha e Nock. :heavy_check_mark:
@@ -13,8 +14,8 @@ Acesse o projeto em: https://api-herois-gama.herokuapp.com/documentation
 * Criar variáveis de ambiente para produção e desenvolvimento. :heavy_check_mark:
 * Fazer o deploy da aplicação no Heroku. :heavy_check_mark:
 
-####Como executar o projeto:
-#####Requisitos:
+#### Como executar o projeto:
+##### Requisitos:
 * NodeJS LTS ^12.x
 * Docker CLI ^19.03.x
 
