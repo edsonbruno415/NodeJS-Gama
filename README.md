@@ -1,6 +1,7 @@
 # API-Hérois - NodeJS
 ### Exercícios propostos durantes as aulas de NodeJS da Gama Academy para a criação de uma API com NodeJS
-Instrutor: Erick Wendel
+Instrutor: [Erick Wendel](https://cursos.erickwendel.com.br/)
+
 Acesse o projeto em: https://api-herois-gama.herokuapp.com/documentation
 
 #### Objetivo:
