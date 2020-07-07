@@ -77,7 +77,7 @@ git clone https://github.com/edsonbruno415/NodeJS-Gama.git
 ```
 * Navegue até a pasta do projeto:
 ```
-cd NodeJS-Gama
+cd NodeJS-Gama/23-heroku/
 ```
 * Instale todas as dependências e inicie o projeto em modo de desenvolvimento:
 ```
